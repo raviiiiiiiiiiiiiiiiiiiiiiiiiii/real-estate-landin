@@ -1,77 +1,263 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Luxera Heights – 3 & 4 BHK Residences | Book a Site Visit</title>
-  <meta name="description" content="Premium 3 & 4 BHK residences at Luxera Heights. Prime location, modern amenities, assured quality. Book a site visit in 30 seconds. Limited units available." />
-  <meta name="theme-color" content="#0a0a0a" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Luxera Heights – Book a Site Visit</title>
 
-  <style>
-    :root{
-      --bg:#0b0d10;--card:#12151a;--muted:#9aa3af;--text:#e5e7eb;--accent:#3b82f6;
-      --shadow:0 10px 30px rgba(0,0,0,.35);
-    }
-    *{box-sizing:border-box}
-    body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,sans-serif;}
-    a{text-decoration:none;color:inherit}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    header{position:sticky;top:0;background:rgba(11,13,16,.7);backdrop-filter:blur(10px);z-index:40}
-    .container{max-width:1150px;margin:auto;padding:0 16px}
-    .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
-    .btn{padding:12px 16px;border-radius:12px;font-weight:600;border:1px solid #1f2937;display:inline-flex;align-items:center;gap:6px}
-    .btn-primary{background:#3b82f6;border-color:#3b82f6;color:white}
-    .btn-outline{background:transparent;color:var(--text)}
-    .btn-whatsapp{background:#25D366;border-color:#25D366;color:white}
+<style>
+:root {
+  --bg: #0b0d10;
+  --text: #e5e7eb;
+  --muted: #9aa3af;
+  --card: #12151a;
+  --accent: #3b82f6;
+}
 
-    .hero{position:relative}
-    .hero img{width:100%;height:85vh;object-fit:cover}
-    .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.2),#0b0d10 80%)}
-    .hero-content{position:absolute;bottom:50px;left:50%;transform:translateX(-50%);max-width:700px;background:rgba(0,0,0,.55);padding:24px;border-radius:18px}
+* { box-sizing: border-box; margin:0; padding:0; }
 
-    h1{margin:0;font-size:38px;line-height:1.1}
-    .sub{color:#9aa3af;margin:10px 0}
-    .chip-row{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
-    .chip{padding:6px 10px;border:1px solid #374151;border-radius:999px;font-size:12px;color:#d1d5db}
+body {
+  font-family: Inter, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.45;
+}
 
-    .section{padding:40px 0}
-    .muted{color:#9aa3af}
+a { color: inherit; text-decoration: none; }
 
-    .gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px}
-    .gallery img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+.container {
+  max-width: 1150px;
+  margin: auto;
+  padding: 0 16px;
+}
 
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .card{background:#12151a;border:1px solid #1f2937;border-radius:14px;padding:16px}
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(11,13,16,.8);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
 
-    .floorplan{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    .amenities{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .amenity{background:#12151a;border:1px solid #1f2937;padding:14px;border-radius:12px}
+.nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding: 14px 0;
+}
 
-    .map iframe{width:100%;height:420px;border:0;border-radius:14px}
+.btn {
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 1px solid #1f2937;
+  font-weight: 600;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
 
-    .faq details{background:#12151a;padding:14px;border:1px solid #1f2937;border-radius:12px;margin-bottom:10px}
-    .faq summary{cursor:pointer;font-weight:600}
+.btn-primary { background: var(--accent); color: white; border-color: var(--accent); }
+.btn-outline { background: transparent; color: var(--text); }
+.btn-whatsapp { background: #25D366; color: white; border-color: #25D366; }
 
-    .sticky-cta{position:sticky;bottom:0;background:rgba(11,13,16,.85);border-top:1px solid #1f2937;padding:10px 0;backdrop-filter:blur(8px)}
-    .sticky-cta .inner{display:flex;justify-content:space-between;align-items:center}
+/* HERO */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  max-height: 700px;
+}
 
-    @media(max-width:900px){
-      .gallery{grid-template-columns:1fr 1fr}
-      .grid-3{grid-template-columns:1fr}
-      .floorplan{grid-template-columns:1fr}
-      .amenities{grid-template-columns:1fr 1fr}
-      .sticky-cta .inner{flex-direction:column;gap:10px;text-align:center}
-    }
-  </style>
+.hero img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.hero-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(to bottom,rgba(0,0,0,.25),#0b0d10 80%);
+}
+
+.hero-content {
+  position:absolute;
+  bottom:35px;
+  left:50%;
+  transform:translateX(-50%);
+  width:90%;
+  max-width:700px;
+  background:rgba(0,0,0,.55);
+  padding:22px;
+  border-radius:18px;
+}
+
+/* TEXT */
+h1 {
+  font-size: clamp(24px, 5vw, 40px);
+  margin-bottom: 10px;
+}
+
+.sub {
+  color: var(--muted);
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+.chip-row {
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin:12px 0;
+}
+
+.chip {
+  padding:6px 10px;
+  border:1px solid #374151;
+  border-radius:999px;
+  font-size:12px;
+}
+
+/* SECTION */
+.section { padding: 40px 0; }
+.muted { color: var(--muted); }
+
+/* GALLERY */
+.gallery {
+  display:grid;
+  gap:10px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.gallery img {
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+@media(min-width:800px){
+  .gallery {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+  .gallery img {
+    height:100%;
+  }
+}
+
+/* CARDS */
+.grid-3 {
+  display:grid;
+  gap:16px;
+}
+
+.card {
+  background: var(--card);
+  border:1px solid #1f2937;
+  padding:16px;
+  border-radius:12px;
+}
+
+@media(min-width:800px){
+  .grid-3 { grid-template-columns: repeat(3,1fr); }
+}
+
+/* FLOORPLANS */
+.floorplan {
+  display:grid;
+  gap:16px;
+}
+
+.floorplan img {
+  width:100%;
+  border-radius:14px;
+}
+
+@media(min-width:800px){
+  .floorplan { grid-template-columns: 1fr 1fr; }
+}
+
+/* AMENITIES */
+.amenities {
+  display:grid;
+  gap:12px;
+}
+
+.amenity {
+  background: var(--card);
+  border:1px solid #1f2937;
+  padding:14px;
+  border-radius:12px;
+}
+
+@media(min-width:700px){
+  .amenities { grid-template-columns: repeat(4,1fr); }
+}
+
+@media(max-width:699px){
+  .amenities { grid-template-columns: repeat(2,1fr); }
+}
+
+/* FAQ */
+.faq details {
+  background:var(--card);
+  border:1px solid #1f2937;
+  padding:14px;
+  border-radius:12px;
+  margin-bottom:10px;
+}
+
+summary { cursor:pointer; }
+
+/* BOOK FORM */
+input {
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #1f2937;
+  background:#0b0f14;
+  color:white;
+  margin-bottom:12px;
+}
+
+button { cursor:pointer; }
+
+/* STICKY CTA */
+.sticky-cta {
+  position:sticky;
+  bottom:0;
+  background:rgba(11,13,16,.85);
+  backdrop-filter:blur(6px);
+  padding:10px 0;
+  border-top:1px solid #1f2937;
+  z-index:100;
+}
+
+.sticky-cta .inner {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+
+@media(max-width:700px){
+  .sticky-cta .inner {
+    flex-direction:column;
+    text-align:center;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
   <div class="container nav">
-    <div style="font-weight:800;font-size:20px">Luxera Heights</div>
-    <div>
+    <div style="font-weight:800;font-size:20px;">Luxera Heights</div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
       <a class="btn btn-outline" href="tel:+919999999999">Call</a>
       <a class="btn btn-whatsapp" href="https://wa.me/919999999999">WhatsApp</a>
       <a class="btn btn-primary" href="#book">Book Visit</a>
@@ -80,23 +266,23 @@
 </header>
 
 <section class="hero">
-  <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1920" />
+  <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1920">
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
     <h1>Premium 3 & 4 BHK Homes – Possession Q4 2026</h1>
-    <p class="sub">Prime location • 40+ amenities • Starting at ₹95L • Limited units</p>
+    <p class="sub">Prime location • 40+ amenities • Starting ₹95L • Limited units</p>
 
     <div class="chip-row">
-      <span class="chip">🚇 8 min from Metro</span>
+      <span class="chip">🚇 8 min Metro</span>
       <span class="chip">🏊 Infinity Pool</span>
-      <span class="chip">🌳 2.5 Acre Park</span>
+      <span class="chip">🌳 Central Park</span>
       <span class="chip">🛡️ 3-Tier Security</span>
     </div>
 
-    <div style="display:flex;gap:10px;">
-      <a class="btn btn-primary" href="#book">Book Site Visit</a>
-      <a class="btn btn-outline" href="#gallery">View Gallery</a>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <a class="btn btn-primary" href="#book">Book Visit</a>
+      <a class="btn btn-outline" href="#gallery">Gallery</a>
       <a class="btn btn-outline" href="#floorplans">Floor Plans</a>
     </div>
   </div>
@@ -104,7 +290,7 @@
 
 <section id="gallery" class="section container">
   <h2>Explore the Spaces</h2>
-  <p class="muted">Actual renders + sample flat visuals</p>
+  <p class="muted">Actual renders + sample flat photos</p>
 
   <div class="gallery">
     <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1200">
@@ -116,9 +302,9 @@
 
 <section class="section container">
   <div class="grid-3">
-    <div class="card"><h3>Prime Location</h3><p class="muted">Close to schools, metro, mall and hospitals.</p></div>
-    <div class="card"><h3>Amenities</h3><p class="muted">40+ lifestyle amenities curated for daily living.</p></div>
-    <div class="card"><h3>Smart Pricing</h3><p class="muted">No brokerage • Builder subvention • Loan assistance.</p></div>
+    <div class="card"><h3>Prime Location</h3><p class="muted">Near metro, malls, hospitals.</p></div>
+    <div class="card"><h3>Amenities</h3><p class="muted">40+ curated lifestyle amenities.</p></div>
+    <div class="card"><h3>Smart Pricing</h3><p class="muted">No brokerage • Loan assistance.</p></div>
   </div>
 </section>
 
@@ -130,6 +316,7 @@
       <p class="muted">3 BHK • 1425 sq.ft</p>
       <a class="btn btn-primary" href="#book">Get Brochure</a>
     </div>
+
     <div class="card">
       <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1400">
       <p class="muted">4 BHK • 1970 sq.ft</p>
@@ -141,7 +328,7 @@
 <section class="section container">
   <h2>Amenities</h2>
   <div class="amenities">
-    <div class="amenity">🏋️‍♂️ Gym</div>
+    <div class="amenity">🏋️ Gym</div>
     <div class="amenity">🏊 Pool</div>
     <div class="amenity">🌳 Park</div>
     <div class="amenity">🎥 Mini Theatre</div>
@@ -153,29 +340,22 @@
 </section>
 
 <section class="section container">
-  <h2>Location</h2>
-  <div class="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18..."></iframe>
-  </div>
-</section>
-
-<section class="section container">
   <h2>FAQ</h2>
   <div class="faq">
     <details><summary>Starting price?</summary><p class="muted">₹95L onwards.</p></details>
     <details><summary>Possession?</summary><p class="muted">Q4 2026.</p></details>
-    <details><summary>Loan assistance?</summary><p class="muted">Yes, from all major banks.</p></details>
+    <details><summary>Loan assistance?</summary><p class="muted">Yes, with all major banks.</p></details>
   </div>
 </section>
 
 <section id="book" class="section container">
   <div class="card">
-    <h2>Book Your Site Visit</h2>
-    <p class="muted">We will call you in 10 minutes.</p>
-    
+    <h2>Book a Site Visit</h2>
+    <p class="muted">We’ll call you within 10 minutes.</p>
+
     <form>
-      <input style="width:100%;padding:12px;margin-bottom:10px;border-radius:10px;border:1px solid #1f2937;background:#0b0f14;color:white" placeholder="Name" required>
-      <input style="width:100%;padding:12px;margin-bottom:10px;border-radius:10px;border:1px solid #1f2937;background:#0b0f14;color:white" placeholder="Phone" required>
+      <input placeholder="Full Name" required>
+      <input placeholder="Phone Number" required>
       <button class="btn btn-primary" style="width:100%">Submit</button>
     </form>
   </div>
@@ -183,8 +363,8 @@
 
 <div class="sticky-cta">
   <div class="container inner">
-    <span class="muted">Only 24 units left • Launch Pricing</span>
-    <div>
+    <span class="muted">24 units left • Launch Pricing</span>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
       <a class="btn btn-primary" href="#book">Book Visit</a>
       <a class="btn btn-outline" href="tel:+919999999999">Call</a>
       <a class="btn btn-whatsapp" href="https://wa.me/919999999999">WhatsApp</a>
