@@ -33,13 +33,14 @@ a { color: inherit; text-decoration: none; }
   padding: 0 16px;
 }
 
-/* HEADER */
+/* ✅ CLEAN HEADER */
 header {
   position: sticky;
   top: 0;
-  background: rgba(11,13,16,.8);
-  backdrop-filter: blur(10px);
+  background: rgba(11,13,16,.85);
+  backdrop-filter: blur(8px);
   z-index: 100;
+  border-bottom: 1px solid #1f2937;
 }
 
 .nav {
@@ -55,15 +56,29 @@ header {
   border: 1px solid #1f2937;
   font-weight: 600;
   white-space: nowrap;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
 }
 
 .btn-primary { background: var(--accent); color: white; border-color: var(--accent); }
 .btn-outline { background: transparent; color: var(--text); }
 .btn-whatsapp { background: #25D366; color: white; border-color: #25D366; }
+
+/* ✅ FLOATING CALL BUTTON */
+.call-float {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #0ea5e9;
+  border-radius: 50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  font-size: 26px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.35);
+  z-index: 999;
+}
 
 /* HERO */
 .hero {
@@ -125,7 +140,7 @@ h1 {
 .section { padding: 40px 0; }
 .muted { color: var(--muted); }
 
-/* GALLERY */
+/* ✅ JPG ONLY GALLERY */
 .gallery {
   display:grid;
   gap:10px;
@@ -223,8 +238,6 @@ input {
   margin-bottom:12px;
 }
 
-button { cursor:pointer; }
-
 /* STICKY CTA */
 .sticky-cta {
   position:sticky;
@@ -257,16 +270,20 @@ button { cursor:pointer; }
 <header>
   <div class="container nav">
     <div style="font-weight:800;font-size:20px;">Luxera Heights</div>
+
+    <!-- ✅ REMOVED CALL BUTTON HERE -->
     <div style="display:flex;gap:10px;flex-wrap:wrap;">
-      <a class="btn btn-outline" href="tel:+919999999999">Call</a>
       <a class="btn btn-whatsapp" href="https://wa.me/919999999999">WhatsApp</a>
       <a class="btn btn-primary" href="#book">Book Visit</a>
     </div>
   </div>
 </header>
 
+<!-- ✅ FLOATING CALL BUTTON -->
+<a href="tel:+919999999999" class="call-float">📞</a>
+
 <section class="hero">
-  <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1920">
+  <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688.jpg">
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
@@ -293,10 +310,10 @@ button { cursor:pointer; }
   <p class="muted">Actual renders + sample flat photos</p>
 
   <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1200">
-    <img src="https://images.unsplash.com/photo-1523755231516-e43fd2e8dca5?q=80&w=800">
-    <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2d79?q=80&w=800">
-    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=800">
+    <img src="https://images.unsplash.com/photo-1502672023488-70e25813eb80.jpg">
+    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511.jpg">
+    <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858.jpg">
+    <img src="https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c.jpg">
   </div>
 </section>
 
@@ -312,13 +329,13 @@ button { cursor:pointer; }
   <h2>Floor Plans</h2>
   <div class="floorplan">
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1400">
+      <img src="https://images.unsplash.com/photo-1560185127-6a8c1d1b0741.jpg">
       <p class="muted">3 BHK • 1425 sq.ft</p>
       <a class="btn btn-primary" href="#book">Get Brochure</a>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1400">
+      <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6.jpg">
       <p class="muted">4 BHK • 1970 sq.ft</p>
       <a class="btn btn-primary" href="#book">Get Brochure</a>
     </div>
@@ -366,7 +383,6 @@ button { cursor:pointer; }
     <span class="muted">24 units left • Launch Pricing</span>
     <div style="display:flex;gap:10px;flex-wrap:wrap;">
       <a class="btn btn-primary" href="#book">Book Visit</a>
-      <a class="btn btn-outline" href="tel:+919999999999">Call</a>
       <a class="btn btn-whatsapp" href="https://wa.me/919999999999">WhatsApp</a>
     </div>
   </div>
